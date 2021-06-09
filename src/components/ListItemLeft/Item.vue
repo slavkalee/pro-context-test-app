@@ -119,6 +119,10 @@ export default defineComponent({
     width: 50px;
     position: relative;
   }
+
+  &__count {
+    cursor: pointer;
+  }
   &__color {
     width: 20px;
     height: 20px;
