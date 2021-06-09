@@ -63,7 +63,7 @@ export default defineComponent({
 
     const setArrowsVisible = () => (arrowsVisible.value = !arrowsVisible.value);
 
-    const isChecked = computed(() =>
+    const isChecked = computed<boolean>(() =>
       store.getters.isSelectedItem(props.item.id)
     );
 

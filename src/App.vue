@@ -18,6 +18,7 @@ import RightBlock from "@/components/layout/RightBlock.vue";
 
 import { useStore } from "vuex";
 import ShowLeftIcon from "./components/icons/ShowLeftIcon.vue";
+import { List } from "./interfaces";
 
 export default defineComponent({
   name: "App",
@@ -35,7 +36,7 @@ export default defineComponent({
     const hide = () => (leftsideVisible.value = false);
 
     return {
-      lists: computed(() => store.getters.getAllLists),
+      lists: computed<List[]>(() => store.getters.getAllLists),
       leftsideVisible,
       show,
       hide,

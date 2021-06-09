@@ -112,7 +112,7 @@ export default createStore({
         (item) => listId !== item.listId
       );
     },
-    changeColor(state, payload) {
+    changeColor(state, payload: Color) {
       state.items = state.items.map((item) => {
         if (payload.listId === item.id) {
           item.color = payload.color;
